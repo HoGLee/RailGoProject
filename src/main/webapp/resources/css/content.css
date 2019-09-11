@@ -27,7 +27,7 @@
 .sns-reply-box { margin-bottom:15px; display:grid; grid-template-columns: 40px 1fr; }
 .sns-replyer-profile { width:40px; height:40px; object-fit:cover; border-radius:50%; margin:auto; }
 .sns-reply-writer { font-size:15px; }
-.sns-reply-substance { font-size:15px; }
+.sns-reply-substance { font-size:12px; }
 .sns-reply-reply { font-size:10px; }
 .sns-reply-reply span { color:#009CE9; cursor:pointer; }
 .sns-reply-date { font-size:10px; color:#7f7f7f; }

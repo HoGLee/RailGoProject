@@ -26,6 +26,7 @@
 	<script src="/js/jquery.validate.min.js" type="text/javascript"></script>
 </head>
 <body>
+	<input type="hidden" class="member-code" value="${member.mem_code}">
 	<c:if test="${not empty authMsg}">
 		<script type="text/javascript">
 			alert('${authMsg}');

@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var sns = $('.sns-img'); 
 	var planner = $('.planner-img');
 	var member = $('.member-img');	
-	
+	console.log('planner : '+planner+'member : '+member);
 	$('.sns-img img').attr('src', '/img/header/sns_clicked.png');
 	sns.css('color', '#009CE9');
 	sns.closest('li').css('border-bottom', 'solid 3px #009CE9');
@@ -153,11 +153,12 @@ $(document).ready(function(){
 	
 	// 답글달기 클릭시 테이블 생성
 	$(document).on('click','span.sns-reply-write',function(){
+
 		$('.rerebox').css('display', 'none');
 		console.log('click');
 		var gender = $('input[name="member-gender"]').val();
 		var profile = $('input[name="member-profile"]').val();
-		
+		console.log(profile);
 		var reReply = $(this).closest('div.sns-rereply-append');
 		var originCode = $(this).closest('div.sns-reply-box').find('input[name="comm_code"]').val();
 		var html = '';
@@ -185,12 +186,17 @@ $(document).ready(function(){
 		html += '</div>';
 		reReply.append(html);
 	});
+	$(document).on('mouseenter','.sns-rereply-btn',function(){
+		var mem_code = member;
+		console.log(mem_code);
+		console.log($('.member-code').val());
+	});
 	
 	// 대댓글 입력
 	$(document).on('click','.sns-rereply-btn',function(){
 		$('.rerebox').css('display', 'none');
 		var content = $('.sns-rereply-textarea').val();
-		var mem_code = $('.member-memCode').val();
+		var mem_code = $('.member-code').val();
 		var sns_code = $('.reply-snsCode').val();
 		var comm_code = $(this).closest('div.sns-rereply-append').find('input[name="comm_code"]').val();
 		var rereply_append = $(this).closest('div.sns-rereply-append>div:last');

@@ -6,4 +6,3 @@
 
 > 개발환경 : Spring Framework5, MyBatis3, Oracle11g, Apache Tomcat9, EGit, Slack, AWS
 
-> http://13.124.220.86:8080/
